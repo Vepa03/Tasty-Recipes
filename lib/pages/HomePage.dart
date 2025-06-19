@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 import 'package:tasty_recipes/Provider.dart';
+import 'package:tasty_recipes/pages/AboutUs.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -30,13 +31,21 @@ class _HomepageState extends State<Homepage> {
                     ElevatedButton(onPressed: (){
                       setState(() {
                         Provider.of<ListProvider>(context, listen: false).ayyr();
-                      });Colors.amberAccent;
-                    }, child: Text("-", style: TextStyle(fontSize: width*0.05, fontWeight: FontWeight.bold, color: Colors.black),)),
+                      });
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white
+                    )
+                    ,child: Text("-", style: TextStyle(fontSize: width*0.05, fontWeight: FontWeight.bold, color: Colors.black),)),
                     ElevatedButton(onPressed: (){
                       setState(() {
                         Provider.of<ListProvider>(context, listen: false).gosh();
                       });
-                    }, child: Text("+", style: TextStyle(fontSize: width*0.05, fontWeight: FontWeight.bold, color: Colors.black),))
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white
+                    ), 
+                    child: Text("+", style: TextStyle(fontSize: width*0.05, fontWeight: FontWeight.bold, color: Colors.black),))
                   ],
                 )
               ));
@@ -67,14 +76,48 @@ class _HomepageState extends State<Homepage> {
                     title: Text('Contact',style: TextStyle(fontSize: width*0.05, color: Colors.black),),
                     leading: Icon(Icons.mail_outline, color: Colors.black,),
                     onTap: (){
-              
+                      showDialog(context: context, builder: (_)=>AlertDialog(
+                        title: Text("Habarlasmak ucin", style: TextStyle(color: Colors.black),),
+                        content: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: SizedBox(
+                            height: height*0.2,
+                            child: Column(
+                              children: [
+                                ListTile(
+                                  title: Text("Gmail"),
+                                  leading: Image.asset("lib/assets/images/gmail.png", width: width*0.12,),
+                                  onTap: (){
+                            
+                                  },
+                                ),
+                                ListTile(
+                                  title: Text("Instagram"),
+                                  leading: Image.asset("lib/assets/images/instagram_black.png", width: width*0.12,),
+                                  onTap: (){
+                            
+                                  },
+                                ),
+                                ListTile(
+                                  title: Text("WebSite"),
+                                  leading: Image.asset("lib/assets/images/website_black.png", width: width*0.12,),
+                                  onTap: (){
+                            
+                                  },
+                                ),
+                                
+                              ],
+                            ),
+                          ),
+                        ),
+                      ));
                     },
                   ),
                   ListTile(
                     title: Text('About Us',style: TextStyle(color: Colors.black,fontSize: width*0.05),),
                     leading: Icon(Icons.info_outline, color: Colors.black,),
                     onTap: (){
-              
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>AboutUs()));
                     },
                   ),
                   Divider(),
@@ -93,20 +136,7 @@ class _HomepageState extends State<Homepage> {
           ),
         ),
       ),
-      body: Row(
-        children: [
-          ElevatedButton(onPressed: (){
-            setState(() {
-              Provider.of<ListProvider>(context, listen: false).ayyr();
-            });
-          }, child: Text("ayyr")),
-          ElevatedButton(onPressed: (){
-            setState(() {
-              Provider.of<ListProvider>(context, listen: false).gosh();
-            });
-          }, child: Text("gosh")),
-        ],
-      ),
+      
     );
   }
 }
