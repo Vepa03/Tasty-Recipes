@@ -4,6 +4,7 @@ import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 import 'package:tasty_recipes/Provider.dart';
 import 'package:tasty_recipes/pages/AboutUs.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -85,24 +86,24 @@ class _HomepageState extends State<Homepage> {
                             child: Column(
                               children: [
                                 ListTile(
-                                  title: Text("Gmail"),
+                                  title: Text("Gmail",style: TextStyle(fontSize: width*0.05),),
                                   leading: Image.asset("lib/assets/images/gmail.png", width: width*0.12,),
                                   onTap: (){
-                            
+                                    _mail();
                                   },
                                 ),
                                 ListTile(
-                                  title: Text("Instagram"),
+                                  title: Text("Instagram", style: TextStyle(fontSize: width*0.05)),
                                   leading: Image.asset("lib/assets/images/instagram_black.png", width: width*0.12,),
                                   onTap: (){
-                            
+                                    _linkler("https://www.instagram.com/");
                                   },
                                 ),
                                 ListTile(
-                                  title: Text("WebSite"),
+                                  title: Text("WebSite", style: TextStyle(fontSize: width*0.05)),
                                   leading: Image.asset("lib/assets/images/website_black.png", width: width*0.12,),
                                   onTap: (){
-                            
+                                    _linkler("https://vepababayev.com/");
                                   },
                                 ),
                                 
@@ -138,5 +139,23 @@ class _HomepageState extends State<Homepage> {
       ),
       
     );
+  }
+  
+}
+
+Future <void> _linkler(String url) async{
+  final Uri uri = Uri.parse(url);
+  if(! await launchUrl(uri, mode: LaunchMode.externalApplication)){
+    throw Exception("Girip bolmady $url");
+  }
+}
+
+Future <void> _mail() async{
+  final Uri email = Uri(scheme: 'mailto', path: 'vepababayev03@gmail.com', queryParameters: {
+    'subject': "Suyji Tagamlar",
+    'body': 'Salam yasan programmanyz gaty gowy bolupdyr minnetdar'
+  });
+  if(! await launchUrl(email)){
+    throw Exception("Girip bolmady $email");
   }
 }
