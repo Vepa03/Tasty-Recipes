@@ -22,6 +22,8 @@ class MyApp extends StatelessWidget {
 
         ),
         scaffoldBackgroundColor: const Color.fromARGB(255, 246, 245, 245),
+        drawerTheme: DrawerThemeData(backgroundColor: Colors.white),
+        textTheme: TextTheme(bodyLarge: Colors.black, labelSmall: )
       ),
       home: Homepage(),
     );
