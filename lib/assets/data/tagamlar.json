@@ -1,0 +1,102 @@
+[
+    {
+        "surat": "lib/assets/images/spartacus.webp",
+        "ady": "“Karlowar” torty",
+        "description": ""
+    },
+    {
+        "surat": "lib/assets/images/walnut.webp",
+        "ady": "Pisseli tortjagazlar",
+        "description": ""
+    },
+    {
+        "surat": "lib/assets/images/chocolate_cake.webp",
+        "ady": "Şokoladly tort",
+        "description": ""
+    },
+    {
+        "ady": "lib/assets/images/cream_horn.webp",
+        "description": "Çaýly we kakaoly keks"
+    },
+    {
+        "surat": "lib/assets/images/brownie_cake.webp",
+        "ady": "Içi kremli guýguçjyklar",
+        "description": ""
+    },
+    {
+        "surat": "lib/assets/images/milk_cake.jpg",
+        "ady": "Goýaldylan süýtden tort",
+        "description": ""
+    },
+    {
+        "surat": "lib/assets/images/dried_cake.jpg",
+        "ady": "Iýmişli keks",
+        "description": ""
+    },
+    {
+        "surat": "lib/assets/images/swiss_roll.webp",
+        "ady": "Klubnikaly dolama torty (Rulet)",
+        "description": ""
+    },
+    {
+        "surat": "lib/assets/images/apple_cake.jpg",
+        "ady": "Almaly, armytly we käşirli keks",
+        "description": ""
+    },
+    {
+        "surat": "lib/assets/images/shekerbura.jpg",
+        "ady": "Gutap kökesi",
+        "description": ""
+    },
+    {
+        "surat": "lib/assets/images/soft_dinner_roll.jpg",
+        "ady": "Myssyjak bulkalar",
+        "description": ""
+    },
+    {
+        "surat": "lib/assets/images/rugelach.webp",
+        "ady": "Almaly dolama kökesi",
+        "description": ""
+    },
+    {
+        "surat": "lib/assets/images/shortbread.jpg",
+        "ady": "Gül kökesi",
+        "description": ""
+    },
+    {
+        "surat": "lib/assets/images/berlin_cake.jpg",
+        "ady": "Berlin kökesi",
+        "description": ""
+    },
+    {
+        "surat": "lib/assets/images/horseshoe.jpg",
+        "ady": "“At naly” kökesi",
+        "description": ""
+    },
+    {
+        "surat": "lib/assets/images/linzer.jpg",
+        "ady": "Erik göz köke",
+        "description": ""
+    },
+    {
+        "surat": "lib/assets/images/chess-cookie.jpg",
+        "ady": "Kakaoly köke",
+        "description": ""
+    },
+    {
+        "surat": "lib/assets/images/valentines.avif",
+        "ady": "“Ýürek köke”",
+        "description": ""
+    },
+    {
+        "surat": "lib/assets/images/shortbread.jpg",
+        "ady": "Tärimgözenek tortjagazlar",
+        "description": ""
+    },
+    {
+        "surat": "lib/assets/images/fruit_wheel.jpg",
+        "ady": "Toşaply dolama",
+        "description": ""
+    }
+    
+]
