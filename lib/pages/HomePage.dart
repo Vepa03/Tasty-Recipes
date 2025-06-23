@@ -90,24 +90,24 @@ class _HomepageState extends State<Homepage> {
                     leading: Icon(Icons.exit_to_app_outlined, color: Colors.black,),
                     onTap: (){
                       showDialog(context: context, builder: (_)=>AlertDialog(
-                        title: Text("Programmadan Cykmakcymy ?", style: TextStyle(fontSize: width*0.05),),
+                        title: Text("Programmadan Çykmakçymy ?", style: TextStyle(fontSize: width*0.05),),
                         content: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            ElevatedButton(onPressed: (){
-                              Navigator.pop(context);
-                            },
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.white
-                            )
-                            ,child: Text("Yok", style: TextStyle(fontSize: width*0.04, fontWeight: FontWeight.normal, color: Colors.black),)),
                             ElevatedButton(onPressed: (){
                               SystemNavigator.pop();
                             },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.white
+                            )
+                            ,child: Text("Hawa", style: TextStyle(fontSize: width*0.04, fontWeight: FontWeight.normal, color: Colors.black),)),
+                            ElevatedButton(onPressed: (){
+                              Navigator.pop(context);
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.white
                             ), 
-                            child: Text("Hawa", style: TextStyle(fontSize: width*0.04, fontWeight: FontWeight.normal, color: Colors.black),))
+                            child: Text("Ýok", style: TextStyle(fontSize: width*0.04, fontWeight: FontWeight.normal, color: Colors.black),))
                           ],
                         )
                       ));
@@ -116,7 +116,6 @@ class _HomepageState extends State<Homepage> {
                 ],
               ),
               
-              Center(child: Text("Version 0.0.1", style: TextStyle(fontSize: width*0.04, color: Colors.black),))
             ],
           ),
         ),
