@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:lottie/lottie.dart';
-import 'package:provider/provider.dart';
-import 'package:tasty_recipes/Provider.dart';
 import 'package:tasty_recipes/pages/AboutUs.dart';
 import 'package:tasty_recipes/pages/tagamlar.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -39,11 +37,11 @@ class _HomepageState extends State<Homepage> {
                     width: width*0.6,
                     child: Lottie.asset("lib/assets/images/animation.json")),
                   ListTile(
-                    title: Text('Contact',style: TextStyle(fontSize: width*0.05, color: Colors.black),),
+                    title: Text('Habarlaşmak',style: TextStyle(fontSize: width*0.05, color: Colors.black),),
                     leading: Icon(Icons.mail_outline, color: Colors.black,),
                     onTap: (){
                       showDialog(context: context, builder: (_)=>AlertDialog(
-                        title: Text("Habarlasmak ucin", style: TextStyle(color: Colors.black),),
+                        title: Text("Habarlaşmak üçin", style: TextStyle(color: Colors.black),),
                         content: Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: SizedBox(
@@ -59,14 +57,14 @@ class _HomepageState extends State<Homepage> {
                                 ),
                                 ListTile(
                                   title: Text("Instagram", style: TextStyle(fontSize: width*0.05)),
-                                  leading: Image.asset("lib/assets/images/instagram_black.png", width: width*0.12,),
+                                  leading: Image.asset("lib/assets/images/instagram.png", width: width*0.12,),
                                   onTap: (){
                                     _linkler("https://www.instagram.com/");
                                   },
                                 ),
                                 ListTile(
                                   title: Text("WebSite", style: TextStyle(fontSize: width*0.05)),
-                                  leading: Image.asset("lib/assets/images/website_black.png", width: width*0.12,),
+                                  leading: Image.asset("lib/assets/images/website.png", width: width*0.12,),
                                   onTap: (){
                                     _linkler("https://vepababayev.com/");
                                   },
@@ -80,7 +78,7 @@ class _HomepageState extends State<Homepage> {
                     },
                   ),
                   ListTile(
-                    title: Text('About Us',style: TextStyle(color: Colors.black,fontSize: width*0.05),),
+                    title: Text('Biz Hakynda',style: TextStyle(color: Colors.black,fontSize: width*0.05),),
                     leading: Icon(Icons.info_outline, color: Colors.black,),
                     onTap: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context)=>AboutUs()));
@@ -88,7 +86,7 @@ class _HomepageState extends State<Homepage> {
                   ),
                   Divider(),
                   ListTile(
-                    title: Text('Exit',style: TextStyle(color: Colors.black, fontSize: width*0.05),),
+                    title: Text('Çykalga',style: TextStyle(color: Colors.black, fontSize: width*0.05),),
                     leading: Icon(Icons.exit_to_app_outlined, color: Colors.black,),
                     onTap: (){
                       SystemNavigator.pop();

@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -94,7 +93,7 @@ class _TagamlarDetailState extends State<TagamlarDetail> {
           GestureDetector(
             onTap: (){
               showDialog(context: context, builder: (_)=>AlertDialog(
-                title: Text("Change text size "),
+                title: Text("Tekstiň ululygyny üýtget", style: TextStyle(fontSize: width*0.05),),
                 content: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -121,7 +120,7 @@ class _TagamlarDetailState extends State<TagamlarDetail> {
               ));
             },
             child: Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(15.0),
               child: Icon(Icons.edit),
             ),
           )
@@ -135,9 +134,10 @@ class _TagamlarDetailState extends State<TagamlarDetail> {
             children: [
               ClipRRect(
                 borderRadius: BorderRadius.all(Radius.circular(15)),
-                child: Image.asset(widget.tagamlar.images ?? '', fit: BoxFit.cover,),
+                child: Image.asset(widget.tagamlar.images ?? '', fit: BoxFit.cover, width: width, height: height*0.3,),
               ),
-              Text(widget.tagamlar.description??'', style: TextStyle(fontSize: 18),)
+              SizedBox(height: 10,),
+              Text(widget.tagamlar.description??'', style: TextStyle(fontSize: Provider.of<ListProvider>(context).size))
             ],
           ),
         ),
