@@ -89,7 +89,28 @@ class _HomepageState extends State<Homepage> {
                     title: Text('Çykalga',style: TextStyle(color: Colors.black, fontSize: width*0.05),),
                     leading: Icon(Icons.exit_to_app_outlined, color: Colors.black,),
                     onTap: (){
-                      SystemNavigator.pop();
+                      showDialog(context: context, builder: (_)=>AlertDialog(
+                        title: Text("Programmadan Cykmakcymy ?", style: TextStyle(fontSize: width*0.05),),
+                        content: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            ElevatedButton(onPressed: (){
+                              Navigator.pop(context);
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.white
+                            )
+                            ,child: Text("Yok", style: TextStyle(fontSize: width*0.04, fontWeight: FontWeight.normal, color: Colors.black),)),
+                            ElevatedButton(onPressed: (){
+                              SystemNavigator.pop();
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.white
+                            ), 
+                            child: Text("Hawa", style: TextStyle(fontSize: width*0.04, fontWeight: FontWeight.normal, color: Colors.black),))
+                          ],
+                        )
+                      ));
                     },
                   ),
                 ],
