@@ -21,43 +21,7 @@ class _HomepageState extends State<Homepage> {
     var height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-        title: Text("Tasty Reipes"),
-        actions: [
-          GestureDetector(
-            onTap: (){
-              showDialog(context: context, builder: (_)=>AlertDialog(
-                title: Text("Change text size "),
-                content: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    ElevatedButton(onPressed: (){
-                      setState(() {
-                        Provider.of<ListProvider>(context, listen: false).ayyr();
-                      });
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white
-                    )
-                    ,child: Text("-", style: TextStyle(fontSize: width*0.05, fontWeight: FontWeight.bold, color: Colors.black),)),
-                    ElevatedButton(onPressed: (){
-                      setState(() {
-                        Provider.of<ListProvider>(context, listen: false).gosh();
-                      });
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white
-                    ), 
-                    child: Text("+", style: TextStyle(fontSize: width*0.05, fontWeight: FontWeight.bold, color: Colors.black),))
-                  ],
-                )
-              ));
-            },
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Icon(Icons.edit),
-            ),
-          )
-        ],
+        title: Text("Lezzetli Tagamlar", style: TextStyle(fontSize: width*0.06),),
         
       ),
       drawer: Drawer(

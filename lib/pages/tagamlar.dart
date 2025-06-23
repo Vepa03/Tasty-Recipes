@@ -2,6 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
+import 'package:tasty_recipes/Provider.dart';
 import 'package:tasty_recipes/assets/data/tagamlarModel.dart';
 
 class Tagamlar extends StatefulWidget {
@@ -72,25 +74,72 @@ class _TagamlarState extends State<Tagamlar> {
 }
 
 
-class TagamlarDetail extends StatelessWidget {
+class TagamlarDetail extends StatefulWidget {
 
   final Tagamlarmodel tagamlar;
   const TagamlarDetail({super.key, required this.tagamlar});
 
   @override
+  State<TagamlarDetail> createState() => _TagamlarDetailState();
+}
+
+class _TagamlarDetailState extends State<TagamlarDetail> {
+  @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
+    var height = MediaQuery.of(context).size.height;
     return  Scaffold(
-      appBar:AppBar(title: Text(tagamlar.name??''),),
-      body: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-          children: [
-            ClipRRect(
-              borderRadius: BorderRadius.all(Radius.circular(15)),
-              child: Image.asset(tagamlar.images ?? '', fit: BoxFit.cover,),
+      appBar:AppBar(title: Text(widget.tagamlar.name??''),
+      actions: [
+          GestureDetector(
+            onTap: (){
+              showDialog(context: context, builder: (_)=>AlertDialog(
+                title: Text("Change text size "),
+                content: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    ElevatedButton(onPressed: (){
+                      setState(() {
+                        Provider.of<ListProvider>(context, listen: false).ayyr();
+                      });
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white
+                    )
+                    ,child: Text("-", style: TextStyle(fontSize: width*0.05, fontWeight: FontWeight.bold, color: Colors.black),)),
+                    ElevatedButton(onPressed: (){
+                      setState(() {
+                        Provider.of<ListProvider>(context, listen: false).gosh();
+                      });
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white
+                    ), 
+                    child: Text("+", style: TextStyle(fontSize: width*0.05, fontWeight: FontWeight.bold, color: Colors.black),))
+                  ],
+                )
+              ));
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Icon(Icons.edit),
             ),
-            Text(tagamlar.description??'')
-          ],
+          )
+        ],
+      ),
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(15)),
+                child: Image.asset(widget.tagamlar.images ?? '', fit: BoxFit.cover,),
+              ),
+              Text(widget.tagamlar.description??'', style: TextStyle(fontSize: 18),)
+            ],
+          ),
         ),
       ),
     );
