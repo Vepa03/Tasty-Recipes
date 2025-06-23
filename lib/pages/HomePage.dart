@@ -59,7 +59,7 @@ class _HomepageState extends State<Homepage> {
                                   title: Text("Instagram", style: TextStyle(fontSize: width*0.05)),
                                   leading: Image.asset("lib/assets/images/instagram.png", width: width*0.12,),
                                   onTap: (){
-                                    _linkler("https://www.instagram.com/");
+                                    _linkler("https://www.instagram.com/vepa03_/");
                                   },
                                 ),
                                 ListTile(
@@ -137,8 +137,8 @@ Future <void> _linkler(String url) async{
 
 Future <void> _mail() async{
   final Uri email = Uri(scheme: 'mailto', path: 'vepababayev03@gmail.com', queryParameters: {
-    'subject': "Suyji Tagamlar",
-    'body': 'Salam yasan programmanyz gaty gowy bolupdyr minnetdar'
+    'subject': "Lezzetli Tagamlar",
+    'body': ''
   });
   if(! await launchUrl(email)){
     throw Exception("Girip bolmady $email");
