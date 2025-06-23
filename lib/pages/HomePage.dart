@@ -4,6 +4,7 @@ import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 import 'package:tasty_recipes/Provider.dart';
 import 'package:tasty_recipes/pages/AboutUs.dart';
+import 'package:tasty_recipes/pages/tagamlar.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Homepage extends StatefulWidget {
@@ -137,6 +138,7 @@ class _HomepageState extends State<Homepage> {
           ),
         ),
       ),
+      body: Tagamlar(),
       
     );
   }

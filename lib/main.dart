@@ -35,6 +35,7 @@ class _MyAppState extends State<MyApp> {
         textTheme: TextTheme(titleLarge: TextStyle(color: Colors.black)),
         dividerColor: Colors.black,
         dialogTheme: DialogTheme(backgroundColor: Colors.white,),
+        cardTheme: CardTheme(color: Colors.white,)
         
       ),
       home: Homepage(),

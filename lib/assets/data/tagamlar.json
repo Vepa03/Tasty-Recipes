@@ -15,8 +15,9 @@
         "description": ""
     },
     {
-        "ady": "lib/assets/images/cream_horn.webp",
-        "description": "Çaýly we kakaoly keks"
+        "surat": "lib/assets/images/cream_horn.webp",
+        "ady": "Çaýly we kakaoly keks",
+        "description": ""
     },
     {
         "surat": "lib/assets/images/brownie_cake.webp",
