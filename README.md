@@ -1,6 +1,10 @@
 # tasty_recipes
 
-A new Flutter project.
+I've developed a mobile application called "Lezzetli Tagamlar" using Flutter. The app provides users with a variety of sweet recipes such as cookies, cakes, and chocolate desserts – all in the Turkmen language.
+🔧 Tech stack: Flutter (Dart)
+ 🖼️ Content: Traditional and modern dessert recipes in Turkmen
+ 📦 Distribution: Android APK
+This app is designed for dessert lovers who enjoy baking at home – it works offline and features high-quality visuals.
 
 ## Getting Started
 
